@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Iniciarservidor
+        run: cd server && npm start &
+  
+      - name: Iniciar aplicação web
+        run: cd web && npm start &
       - name: Cypress run
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v6
