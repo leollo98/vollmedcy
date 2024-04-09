@@ -7,7 +7,7 @@ describe('Usuário logado na página de dashboard', () => {
         cy.url().should('eq', 'http://localhost:3000/dashboard')
     })
 
-    it('Com o usuário logado, cadastra um especialista', () => {
+    it('Com o usuário logado, cadastra um especialista',() => {
         cy.visit('/dashboard')
         cy.url().should('eq', 'http://localhost:3000/dashboard')
         cy.contains('Cadastrar especialista').should('be.visible').click()
