@@ -75,7 +75,7 @@ export default function Login() {
     useEffect(() => {
       const loggedUser = localStorage.getItem('token')
       
-      if (resposta || loggedUser) {
+      if (resposta && loggedUser) {
         autenticaStore.login({ email: email, token: resposta });
         console.log(resposta);
         
