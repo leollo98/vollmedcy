@@ -1,1 +1,3 @@
 node_modules
+cypress.env.json
+cypress/screenshots/dashboard.cy.js/Usuário logado na página de dashboard -- Seleciona o botão checkbox Atende por plano após preenchimento do formulário para visualizar os planos de saúde -- before each hook (failed).png

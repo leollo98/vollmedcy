@@ -75,11 +75,16 @@ export default function Login() {
     useEffect(() => {
       const loggedUser = localStorage.getItem('token')
       
-      if (resposta && loggedUser) {
-        autenticaStore.login({ email: email, token: resposta });
-        console.log(resposta);
-        
-        navigate("/dashboard");
+      if (resposta || loggedUser) {
+        try {
+          autenticaStore.login({ email: email, token: resposta });
+          console.log(resposta);
+          
+          navigate("/dashboard");
+          
+        } catch (error) {
+          console.log("Usuário não autenticado")
+        }
       }
     }, [email, navigate, resposta]);
   

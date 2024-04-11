@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"cypress run",
+    
+    "build":"cd web && npm run build",
     "start:web":"cd web && npm start",
     "start:server":"cd server && npm start",
      "cy:open:tablet": "cypress open --config viewportWidth=768 viewportHeight=1024",
