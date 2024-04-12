@@ -18,11 +18,7 @@ module.exports = defineConfig({
       json: false,
       timestamp: "mmddyyyy_HHMMss"
     },
-    env: {
-      "api_login": "http://localhost:8080/auth/login",
-      "api_clinica": "http://localhost:8080/clinica",
-      "api_especialista": "http://localhost:8080/especialista"
-    }
+
 
   },
 });
