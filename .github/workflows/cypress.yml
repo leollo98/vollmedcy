@@ -14,12 +14,18 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Start Server
-        run: npm start
-        # Aqui você pode substituir 'npm start' com o comando que inicia seu servidor, se necessário
-        # Certifique-se de que este comando inicia o servidor na porta correta
-      - name: Wait for Server
-        run: npx wait-on http://localhost:3000
-        # Este comando aguarda o servidor estar pronto antes de prosseguir com os testes
+        run: |
+          cd server
+          npm install
+          npm start &
+      - name: Start Web App
+        run: |
+          cd web
+          npm install
+          npm start &
+      - name: Wait for Servers
+        run: |
+          npx wait-on http://localhost:3000 http://localhost:8080
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
