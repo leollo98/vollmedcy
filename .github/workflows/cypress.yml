@@ -22,6 +22,8 @@ jobs:
            cd server
            npm install 
            npm start &
+        env:
+          SERVER_PORT: 8080
         
 
       - name: Start Web App FrontEnd
