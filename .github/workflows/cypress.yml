@@ -35,7 +35,9 @@ jobs:
         run: |
           echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
         
-      - uses: iFaxity/wait-on-action 
+      - name: Wait Server
+
+        uses: iFaxity/wait-on-action 
         with: 
           resource: http://localhost:8080/
 
