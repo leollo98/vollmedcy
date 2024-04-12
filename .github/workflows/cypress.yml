@@ -20,14 +20,14 @@ jobs:
       - name: Start Server BackEnd
         run: |
           cd server
-          npm install
-          npm start &
+          npm install 
+          nohup npm start &
 
       - name: Start Web App FrontEnd
         run: |
           cd web
           npm install
-          npm start &
+          nohup npm start &
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
