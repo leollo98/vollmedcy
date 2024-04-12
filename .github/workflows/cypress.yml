@@ -32,8 +32,9 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
 
-    env:
-      browser: chrome
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          browser: chrome
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-           
+              
