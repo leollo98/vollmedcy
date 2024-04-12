@@ -35,10 +35,12 @@ jobs:
           # is simply inserted as a string into the command
         run: |
           echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
+
+      - name: get
+        run: curl http://localhost:8080/clinica
         
       - name: Wait Server
-
-        uses: iFaxity/wait-on-action@v1 
+        uses: iFaxity/wait-on-action@v1.1.0 
         with: 
           resource: http://localhost:8080/clinica
 
