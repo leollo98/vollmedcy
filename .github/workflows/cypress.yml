@@ -18,10 +18,11 @@ jobs:
         run: npm install
 
       - name: Start Server BackEnd
-        run: |
-          cd server
-          npm install 
-          nohup npm start &
+        # run: |
+        #   cd server
+        #   npm install 
+        #   nohup npm start &
+        run: docker-compose up -d
 
       - name: Start Web App FrontEnd
         run: |
