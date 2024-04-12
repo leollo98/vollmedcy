@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
+    "start":"npm run start:web && cd .. && start:server",    
     "build":"cd web && npm run build",
     "start:web":"cd web && npm start",
     "start:server":"cd server && npm start",
