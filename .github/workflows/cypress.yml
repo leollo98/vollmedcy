@@ -23,9 +23,9 @@ jobs:
           cd web
           npm install
           npm start &
-      - name: Wait for Servers
-        run: |
-          npx wait-on http://localhost:3000 http://localhost:8080
+      # - name: Wait for Servers
+      #   run: |
+      #     npx wait-on http://localhost:3000 http://localhost:8080
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
