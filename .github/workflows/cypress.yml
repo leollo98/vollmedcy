@@ -32,11 +32,6 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
 
-      - name: Load Cypress environment variables
-        run: echo "export $(jq -r '. | to_entries | .[] | .key + \"=\" + .value' cypress.env.json)" >> $GITHUB_ENV
-    
-      - run: npm install
-
     env:
       browser: chrome
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
