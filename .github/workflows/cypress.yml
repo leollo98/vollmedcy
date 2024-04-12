@@ -21,14 +21,14 @@ jobs:
         run: |
            cd server
            npm install 
-           npm start 
+           npm start &
         
 
       - name: Start Web App FrontEnd
         run: |
           cd web
           npm install
-          nohup npm start &
+          npm start &
 
       - name: Write the cypress.env.json file 📝
           # use quotes around the secret, as its value
