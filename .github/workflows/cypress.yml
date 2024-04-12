@@ -39,7 +39,7 @@ jobs:
 
         uses: iFaxity/wait-on-action@v1 
         with: 
-          resource: http://localhost:8080/
+          resource: http://localhost:8080/clinica
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
