@@ -22,7 +22,9 @@ jobs:
         #   cd server
         #   npm install 
         #   nohup npm start &
-        run: docker-compose up -d
+        run: |
+          cd server  
+          docker-compose up -d
 
       - name: Start Web App FrontEnd
         run: |
