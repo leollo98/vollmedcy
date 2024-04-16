@@ -39,10 +39,9 @@ jobs:
           echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
 
       - name: Run Cypress Tests
-        uses: cypress-io/github-action@v6
-
-        with:
-          browser: chrome
+        # uses: cypress-io/github-action@v6
+        run: npx cypress run
+       
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
